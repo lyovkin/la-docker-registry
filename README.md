@@ -17,26 +17,26 @@ Configure custom registry
 
 Perform a docker login
 ------------------------
-* `docker login -u username http://ip:5000`
+* `docker login -u username http://localhost:5000`
 
 Test publish to Docker Registry
 -------------------------------
 - Pull example image: `docker pull busybox`
-- Tag example image with `<ip>:5000` which represents URL of custom Docker Registry: `docker tag busybox <ip>:5000/busybox`
+- Tag example image with `localhost:5000` which represents URL of custom Docker Registry: `docker tag busybox localhost:5000/busybox`
 - Remove old image: `docker rmi busybox`
-- Publish new image to custom Docker Registry `docker push <ip>:5000/busybox`
+- Publish new image to custom Docker Registry `docker push localhost:5000/busybox`
 
 Test pull from Docker Registry
 -------------------------------
-- Remove pushed image: `docker rmi <ip>:5000/busybox`
-- Pull pushed image: `docker pull <ip>:5000/busybox`
+- Remove pushed image: `docker rmi localhost:5000/busybox`
+- Pull pushed image: `docker pull localhost:5000/busybox`
 
 Manage Docker Registry
 -------------------------------
-- List images via REST API: `http://<ip>:5000/v2/_catalog`
+- List images via REST API: `http://localhost:5000/v2/_catalog`
 - User Web UI: `http://<ip>:<port>/`
 
 Delete image
 -------------------------------
-- Delete via UI: `http://<ip>:<port>`
+- Delete via UI: `http://localhost:<port>`
 - Run GC command: `docker exec -it registry bin/registry garbage-collect /etc/docker/registry/config.yml`	
