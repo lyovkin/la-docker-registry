@@ -1,4 +1,6 @@
 auth/htpasswd
 registry/storage
+certs/domain.key
+certs/domain.crt
 
 docker-compose.override.yml

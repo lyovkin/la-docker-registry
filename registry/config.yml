@@ -13,7 +13,7 @@ storage:
     enabled: true
 
 http:
-  addr: :5000
+  addr: :443
   headers:
     X-Content-Type-Options: [nosniff]
     Access-Control-Allow-Methods: ['HEAD', 'GET', 'OPTIONS', 'DELETE']
