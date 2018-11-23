@@ -34,7 +34,7 @@ Test pull from Docker Registry
 Manage Docker Registry
 -------------------------------
 - List images via REST API: `http://localhost:5000/v2/_catalog`
-- User Web UI: `http://<ip>:<port>/`
+- User Web UI: `http://localhost:<port>/`
 
 Delete image
 -------------------------------
