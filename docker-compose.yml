@@ -6,15 +6,11 @@ services:
     image: registry:2
     restart: always
     ports:
-      - 443:443
+      - 5000:5000
     volumes:
       - ./auth:/auth
-      - ./certs:/certs
       - ./registry/storage:/var/lib/registry
       - ./registry/config.yml:/etc/docker/registry/config.yml
-    environment:
-      - REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt
-      - REGISTRY_HTTP_TLS_KEY=/certs/domain.key
 
   registry-ui:
     container_name: registry-ui
