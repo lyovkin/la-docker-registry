@@ -15,7 +15,8 @@ Configure custom registry
 - `username:$2y$05$mnaMdOsL7RCjyhTwYnGSp.7OUmZyd2EYLYj0WWKGKSpcVCl9`
 - Build docker containers: `docker-compose up -d --build`
 
-# Perform a docker login
+Configure custom registry
+------------------------- 
 * `docker login -u username http://ip:5000`
 
 Test publish to Docker Registry
