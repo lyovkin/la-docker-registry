@@ -1,0 +1,4 @@
+auth/*
+registry/*
+
+docker-compose.override.yml

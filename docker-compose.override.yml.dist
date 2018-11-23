@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  registry-ui:
+    ports:
+      - 8080:80
