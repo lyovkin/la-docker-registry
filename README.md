@@ -40,3 +40,11 @@ Delete image
 -------------------------------
 - Delete via UI: `http://localhost:<port>`
 - Run GC command: `docker exec -it registry bin/registry garbage-collect /etc/docker/registry/config.yml`	
+
+Add certs via Certbot
+-------------------------------
+- `certbot certonly --keep-until-expiring --standalone -d domain.example.com --email info@example.com`
+- Rename SSL certificates:
+- `cd /etc/letsencrypt/live/domain.example.com/`
+- `cp privkey.pem /path/certs/registry.key`
+- `cat cert.pem chain.pem > /path/certs/registry.crt`
