@@ -9,8 +9,12 @@ services:
       - 5000:5000
     volumes:
       - ./auth:/auth
+      - ./certs:/certs
       - ./registry/storage:/var/lib/registry
       - ./registry/config.yml:/etc/docker/registry/config.yml
+    environment:
+      - REGISTRY_HTTP_TLS_CERTIFICATE=/certs/registry.crt
+      - REGISTRY_HTTP_TLS_KEY=/certs/registry.key
 
   registry-ui:
     container_name: registry-ui
